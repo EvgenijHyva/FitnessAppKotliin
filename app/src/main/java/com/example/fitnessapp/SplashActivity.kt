@@ -26,4 +26,9 @@ class SplashActivity : AppCompatActivity() { // splash customization
 
         // timer deactivation on splash screen if user close app immediately
     }
+
+    override fun onDestroy() {
+        timer.cancel()
+        super.onDestroy()
+    }
 }
