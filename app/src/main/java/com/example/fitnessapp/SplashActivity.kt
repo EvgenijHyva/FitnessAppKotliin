@@ -15,19 +15,16 @@ class SplashActivity : AppCompatActivity() { // splash customization
         // timer activation
         timer = object : CountDownTimer(2000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                //
-            }
 
+            }
             override fun onFinish() {
                 startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             }
-
         }.start()
-
-        // timer deactivation on splash screen if user close app immediately
     }
 
     override fun onDestroy() {
+        // timer deactivation on splash screen if user close app immediately
         timer.cancel()
         super.onDestroy()
     }
