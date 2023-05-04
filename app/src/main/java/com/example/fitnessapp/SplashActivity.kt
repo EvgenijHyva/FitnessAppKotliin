@@ -1,6 +1,7 @@
 package com.example.fitnessapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -14,14 +15,14 @@ class SplashActivity : AppCompatActivity() { // splash customization
         // timer activation
         timer = object : CountDownTimer(2000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                TODO("Not yet implemented")
+                //
             }
 
             override fun onFinish() {
-                TODO("Not yet implemented")
+                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             }
 
-        }
+        }.start()
 
         // timer deactivation on splash screen if user close app immediately
     }
