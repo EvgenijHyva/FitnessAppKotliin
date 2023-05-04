@@ -2,7 +2,7 @@
     <string name="app_name">My fitness</string>
     <string name="tagline"> На пути к совершенству </string>
     <string name="motivation_image">Motivation image</string>
-    <string name="remaining">Осталось\n</string>
+    <string name="remaining">Осталось</string>
 
 
 </resources>
