@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="exersize">
-        <item></item>
+    <string-array name="exercise">
+        <!-- Pattern: exercise name | time or (x)repetition count | gif.file name -->
+        <item>Relax|30|relaxed-cat.gif</item>
+        <item>Planka|90|planka.gif</item>
+        <item>Press|x50|press.gif</item>
+        <item>Press continuing|x50|press2.gif</item>
+        <item>Press Turnik|x25|press3.gif</item>
+        <item>X-jump|120|x.gif</item>
+    </string-array>
+    <string-array name="day_exercises">
+        <!-- based on exercise array -->
+        <item>5,0,1,0,2</item>
+        <item>5,0,3,0,4</item>
+        <item>5,0,3,0,4</item>
+        <item>5,0,3,0,4,0,3</item>
+        <item>5,0,3,0,4,0,2,0,4</item>
+        <item>5,0,2,0,1,0,2,0,4</item>
+        <item>5,0,4,0,4,0,3,0,3</item>
+        <item>5,0,1,0,2,0,3,0,4,0,5</item>
+        <item>5,0,2,0,2,0,3,0,3,0,3,0,4,0,5</item>
+        <item>5,0,1,0,1,0,2,0,2,0,3,0,3,0,4,0,4,0,5</item>
     </string-array>
 </resources>
