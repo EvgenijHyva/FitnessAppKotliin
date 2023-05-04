@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">FitnessApp</string>
-    <string name="title_activity_app">AppActivity</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">My fitness</string>
+    <string name="tagline"> На пути к совершенству </string>
+    <string name="motivation_image">Motivation image</string>
+    <string name="remaining">Осталось\n</string>
+
+
 </resources>
