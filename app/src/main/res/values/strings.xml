@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">My fitness</string>
-    <string name="tagline"> На пути к совершенству </string>
+    <string name="tagline"> On the way to perfection </string>
     <string name="motivation_image">Motivation image</string>
-    <string name="remaining">Осталось</string>
+    <string name="remaining">Remaining</string>
+    <string name="day">Day:</string>
 
 
 </resources>
