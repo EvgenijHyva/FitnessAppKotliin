@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessapp.R
 import com.example.fitnessapp.adapters.DayModel
 import com.example.fitnessapp.adapters.DaysAdapter
+import com.example.fitnessapp.adapters.ExerciseModel
 import com.example.fitnessapp.databinding.FragmentDaysBinding
 import com.example.fitnessapp.utils.FragmentManager
 
@@ -40,6 +41,22 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
             )
         }
         return tempArray
+    }
+
+    private  fun fillExerciseList(day: DayModel) {
+        val tempList = ArrayList<ExerciseModel>()
+        day.exercises.split(",").forEach {
+            val exercisesList = resources.getStringArray(R.array.exercise)
+            val exercise = exercisesList[it.toInt()]
+            val exersizeDataArr = exercise.split("|")
+            tempList.add(
+                ExerciseModel(
+                    exersizeDataArr[0],
+                    exersizeDataArr[1],
+                    exersizeDataArr[2]
+                )
+            )
+        }
     }
 
     companion object {
