@@ -11,9 +11,10 @@ import com.example.fitnessapp.R
 import com.example.fitnessapp.adapters.DayModel
 import com.example.fitnessapp.adapters.DaysAdapter
 import com.example.fitnessapp.databinding.FragmentDaysBinding
+import com.example.fitnessapp.utils.FragmentManager
 
 
-class DaysFragment : Fragment() {
+class DaysFragment : Fragment(), DaysAdapter.Listener {
     private lateinit var binding: FragmentDaysBinding
 
     override fun onCreateView(
@@ -25,7 +26,7 @@ class DaysFragment : Fragment() {
     }
 
     private fun initRecyclerView() = with(binding) {
-        val adapter = DaysAdapter()
+        val adapter = DaysAdapter(this@DaysFragment) // expect listener from correct fragment
         rcViewDays.layoutManager = LinearLayoutManager(activity as AppCompatActivity)
         rcViewDays.adapter = adapter
         adapter.submitList(fillDaysArray())
@@ -49,5 +50,11 @@ class DaysFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initRecyclerView()
+    }
+
+    override fun onClick(day: DayModel) {
+        FragmentManager.setFragment(
+            ExercisesListFragment.newInstance(), activity as AppCompatActivity
+        )
     }
 }
