@@ -5,6 +5,6 @@
     <string name="remaining">Remaining</string>
     <string name="day">Day:</string>
     <string name="exercise">exercises</string>
-
+    <string name="waiting_message">Exercises starts after:</string>
 
 </resources>
