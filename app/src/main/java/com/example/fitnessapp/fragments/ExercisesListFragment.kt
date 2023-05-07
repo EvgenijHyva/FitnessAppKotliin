@@ -8,12 +8,9 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fitnessapp.R
-import com.example.fitnessapp.adapters.DayModel
-import com.example.fitnessapp.adapters.DaysAdapter
 import com.example.fitnessapp.adapters.ExerciseAdapter
 import com.example.fitnessapp.databinding.ExercisesListFragmentBinding
-import com.example.fitnessapp.databinding.FragmentDaysBinding
+import com.example.fitnessapp.utils.FragmentManager
 import com.example.fitnessapp.utils.MainViewModel
 
 
@@ -42,6 +39,9 @@ class ExercisesListFragment : Fragment() {
         adapter = ExerciseAdapter()
         rcView.layoutManager = LinearLayoutManager(activity)
         rcView.adapter = adapter
+        startExerciseButton.setOnClickListener {
+            FragmentManager.setFragment(WaitingFragment.newInstance(), activity as AppCompatActivity)
+        }
     }
 
     companion object {
