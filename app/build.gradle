@@ -39,7 +39,7 @@ android {
 }
 
 dependencies {
-    implementation 'pl.droidsoroids.gif:android-gif-drawable:1.2.23'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
     implementation 'androidx.fragment:fragment-ktx:1.5.7' // fragment activity dependency
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'

@@ -10,6 +10,7 @@ import com.example.fitnessapp.R
 import com.example.fitnessapp.databinding.DaysListItemBinding
 import com.example.fitnessapp.databinding.ExerciseListItemBinding
 import com.example.fitnessapp.databinding.ExercisesListFragmentBinding
+import pl.droidsonroids.gif.GifDrawable
 
 
 class ExerciseAdapter() : ListAdapter<ExerciseModel,
@@ -21,6 +22,7 @@ class ExerciseAdapter() : ListAdapter<ExerciseModel,
         fun setData(data: ExerciseModel) = with(binding) {// for direct identification (not necessary)
             tvName.text = data.exerciseName
             tvCount.text= data.timeOrRepeats
+            imExcersize.setImageDrawable(GifDrawable(root.context.assets, data.imagePath))
         }
     }
 
