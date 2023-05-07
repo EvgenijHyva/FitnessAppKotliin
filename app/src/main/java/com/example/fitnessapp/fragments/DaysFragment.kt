@@ -73,6 +73,7 @@ class DaysFragment : Fragment(), DaysAdapter.Listener {
     }
 
     override fun onClick(day: DayModel) {
+        fillExerciseList(day)
         FragmentManager.setFragment(
             ExercisesListFragment.newInstance(), activity as AppCompatActivity
         )

@@ -32,7 +32,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/tvCont"
+            app:layout_constraintEnd_toStartOf="@+id/tvCount"
             app:layout_constraintStart_toEndOf="@+id/imExcersize"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,12 +40,14 @@
             android:id="@+id/chB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="auto"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvCont"
+            android:id="@+id/tvCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
