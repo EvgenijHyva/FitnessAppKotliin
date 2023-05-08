@@ -7,5 +7,8 @@
     <string name="exercise">exercises</string>
     <string name="waiting_message">Exercises starts after:</string>
     <string name="start">Start</string>
+    <string name="next">Next</string>
+    <string name="timeTemplate">00:30</string>
+    <string name="exerciseNameTemplate">Exercise</string>
 
 </resources>
