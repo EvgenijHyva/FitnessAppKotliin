@@ -20,7 +20,7 @@ class ExerciseAdapter() : ListAdapter<ExerciseModel,
     class ExerciseHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ExerciseListItemBinding.bind(view) // exercises_list_item
         fun setData(data: ExerciseModel) = with(binding) {// for direct identification (not necessary)
-            tvName.text = data.exerciseName
+            tvExerciseName.text = data.exerciseName
             tvCount.text= data.timeOrRepeats
             imExcersize.setImageDrawable(GifDrawable(root.context.assets, data.imagePath))
         }

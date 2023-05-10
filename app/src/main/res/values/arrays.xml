@@ -22,4 +22,11 @@
         <item>5,0,2,0,2,0,3,0,3,0,3,0,4,0,5</item>
         <item>5,0,1,0,1,0,2,0,2,0,3,0,3,0,4,0,4,0,5</item>
     </string-array>
+    <string-array name="congratulations">
+        <!-- Pattern: exercise name | time or (x)repetition count | gif.file name -->
+        <item>congrats1.gif</item>
+        <item>congrats2.gif</item>
+        <item>congrats3.gif</item>
+        <item>congrats4.gif</item>
+    </string-array>
 </resources>

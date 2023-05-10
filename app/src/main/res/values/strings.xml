@@ -10,5 +10,6 @@
     <string name="next">Next</string>
     <string name="timeTemplate">00:30</string>
     <string name="exerciseNameTemplate">Exercise</string>
+    <string name="time_template">00:30</string>
 
 </resources>
