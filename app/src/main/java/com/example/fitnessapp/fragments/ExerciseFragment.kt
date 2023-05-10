@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
+import com.example.fitnessapp.R
 import com.example.fitnessapp.adapters.ExerciseModel
 import com.example.fitnessapp.databinding.ExerciseBinding
 import com.example.fitnessapp.utils.MainViewModel
@@ -46,6 +47,7 @@ class ExerciseFragment : Fragment() {
             val exerciseItem = exerciseList?.get(exerciseCounter++) ?: return
             showExercise(exerciseItem)
             setExerciseType(exerciseItem)
+            showUpcomingExercise()
         } else {
             Toast.makeText(activity, "All done", Toast.LENGTH_LONG).show()
         }
@@ -79,8 +81,17 @@ class ExerciseFragment : Fragment() {
         }.start()
     }
 
-    private fun showUpcomingExercise() {
-
+    private fun showUpcomingExercise() = with(binding) {
+        if (exerciseCounter < exerciseList?.size!!) {
+            val exerciseItem = exerciseList?.get(exerciseCounter) ?: return
+            tvNextExerciseName.text = exerciseItem.exerciseName
+            imNext.setImageDrawable(GifDrawable(root.context.assets, exerciseItem.imagePath))
+        } else {
+            tvNextExerciseName.text = getString(R.string.finnish_exercise)
+            val congratulationsArray = resources.getStringArray(R.array.congratulations)
+            val randomCongratsPath = congratulationsArray.random()
+            imNext.setImageDrawable(GifDrawable(root.context.assets, randomCongratsPath.toString()))
+        }
     }
 
     companion object {

@@ -11,5 +11,6 @@
     <string name="timeTemplate">00:30</string>
     <string name="exerciseNameTemplate">Exercise</string>
     <string name="time_template">00:30</string>
+    <string name="finnish_exercise">Finnish</string>
 
 </resources>
